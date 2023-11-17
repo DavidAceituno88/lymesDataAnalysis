@@ -1,0 +1,6 @@
+SELECT REPLACE(Ctyname,' COUNTY','') AS county, Stname AS State,
+ststatus AS Incidence_Level, 
+Cases2001 AS 2001, Cases2002 AS 2002,Cases2003 AS 2003, Cases2004 AS 2004,Cases2005 AS 2005,
+Cases2006 AS 2006,Cases2007 AS 2007,Cases2008 AS 2008,Cases2009 AS 2009,Cases2010 AS 2010,
+Cases2011 AS 2011,Cases2012 AS 2012,Cases2013 AS 2013
+FROM Cases_by_county
