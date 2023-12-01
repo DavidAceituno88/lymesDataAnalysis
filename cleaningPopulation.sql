@@ -1,3 +1,25 @@
+SELECT Year,Asian + Pacific_Islander AS 'Asian/PacificIslander'
+FROM UsPopulation
+
+ALTER TABLE UsPopulation 
+ADD "Asian/PacificIslander" INT;
+
+ALTER TABLE UsPopulation 
+ADD "Other" INT;
+
+UPDATE UsPopulation
+SET "Asian/PacificIslander" = Asian + Pacific_Islander
+
+UPDATE UsPopulation
+SET Other = Hispanic + Two_or_more_races
+
+ALTER TABLE UsPopulation
+DROP COLUMN  hispanic
+
+EXEC  sp_RENAME 'UsPopulation.American_Indian_Alaska_Native', 'Native American', 'COLUMN';
+SELECT * FROM UsPopulation
+
+
 /****** Script for SelectTopNRows command from SSMS  ******/
 use[Lymes]
 GO
